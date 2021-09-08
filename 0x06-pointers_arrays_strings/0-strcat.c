@@ -1,25 +1,23 @@
 #include "main.h"
 /**
- * _strncat - It takes 3 arguments
- * It concatenates two strings
- * @dest: The destination of string
- * @src: The string to be copied
- * @n: The number of bytes to be copied
- * Return: returns dest
+ *_strcat-concatenates two strings.
+ *@dest:destination string.
+ *@src:source string.
+ *
+ *Return:Pointer to the cancated string.
  */
-char *_strncat(char *dest, char *src, int n)
-{
-	int a, b;
 
-	for  (a = 0; dest[a] != '\0'; a++)
+char *_strcat(char *dest, char *src)
+{
+	int i, m;
+	/*Get the size of the destination string.*/
+	for (i = 0; dest[i] != '\0'; i++)
 		;
-		for (b = 0; b < n && src[b] != '\0'; b++)
-		{
-			dest[a + b] = src[b];
-		}
-	dest[a + b] = '\0';
+	for (m = 0; src[m] != '\0'; m++)
+	{
+		dest[i] = src[m];
+		i++;
+	}
+	dest[i] = '\0';
 	return (dest);
 }
-
-
-
