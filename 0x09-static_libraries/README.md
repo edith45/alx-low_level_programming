@@ -1,0 +1,1 @@
+This creates a library containig all the c files
